@@ -1,374 +1,1110 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="JoshGilmour.com resume site about josh gilmour, jgilmour, joshua gilmour">
-    <meta name="author" content="Josh Gilmour">
-
-    <title>Josh Gilmour</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom fonts for this template -->
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/4a97ee9d81.js" crossorigin="anonymous"></script>
-    <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"> -->
-    <!--<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet"> -->
-
-    <!-- Custom styles for this template -->
-    <link href="css/resume.min.css" rel="stylesheet">
-
-  </head>
-
-  <body id="page-top">
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">
-        <span class="d-block d-lg-none">Josh Gilmour</span>
-        <span class="d-none d-lg-block">
-          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/joshg.jpg" alt="">
-        </span>
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#education">Education</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
-          </li>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josh Gilmour — IT Leader</title>
+    <meta name="description" content="Senior Director of IT with 20+ years of experience driving business transformation through technology leadership.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-bg: #0f0f0e;
+            --color-bg-elevated: #1a1918;
+            --color-bg-card: #1f1e1c;
+            --color-text: #f5f4f0;
+            --color-text-muted: #9a9590;
+            --color-text-subtle: #5a5550;
+            --color-accent: #e9a84a;
+            --color-accent-dim: rgba(233, 168, 74, 0.15);
+            --color-border: #2e2c28;
+            --font-display: 'DM Serif Display', Georgia, serif;
+            --font-body: 'IBM Plex Sans', -apple-system, sans-serif;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--color-text);
+            background: var(--color-bg);
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Subtle grid background */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        a {
+            color: var(--color-accent);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        a:hover {
+            color: var(--color-text);
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(15, 15, 14, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--color-border);
+        }
+        
+        .nav-logo {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            color: var(--color-text);
+            letter-spacing: -0.02em;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--color-text-muted);
+            font-size: 0.875rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+        }
+        
+        .nav-links a:hover {
+            color: var(--color-accent);
+        }
+        
+        /* Mobile nav toggle */
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        .nav-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--color-text);
+            margin: 5px 0;
+            transition: var(--transition);
+        }
+        
+        /* Sections */
+        section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .section-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--color-border);
+            max-width: 100px;
+        }
+        
+        h1, h2, h3 {
+            font-family: var(--font-display);
+            font-weight: 400;
+            letter-spacing: -0.02em;
+        }
+        
+        h2 {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            margin-bottom: 3rem;
+            color: var(--color-text);
+        }
+        
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 8rem;
+            position: relative;
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .hero h1 {
+            font-size: clamp(3rem, 7vw, 5rem);
+            line-height: 1.05;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero h1 span {
+            color: var(--color-accent);
+        }
+        
+        .hero-tagline {
+            font-size: 1.25rem;
+            color: var(--color-text-muted);
+            max-width: 540px;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+        
+        .hero-meta {
+            display: flex;
+            gap: 2rem;
+            font-size: 0.875rem;
+            color: var(--color-text-muted);
+        }
+        
+        .hero-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .hero-meta svg {
+            width: 16px;
+            height: 16px;
+            stroke: var(--color-accent);
+        }
+        
+        .hero-image {
+            position: relative;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius: 8px;
+            filter: grayscale(30%) sepia(10%);
+            transition: var(--transition);
+        }
+        
+        .hero-image:hover img {
+            filter: grayscale(0%) sepia(0%);
+        }
+        
+        .hero-image::before {
+            content: '';
+            position: absolute;
+            inset: -8px;
+            border: 1px solid var(--color-accent);
+            border-radius: 12px;
+            opacity: 0.3;
+            transition: var(--transition);
+        }
+        
+        .hero-image:hover::before {
+            opacity: 0.6;
+            inset: -12px;
+        }
+        
+        /* Scroll indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--color-text-subtle);
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            animation: float 2s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(8px); }
+        }
+        
+        .scroll-indicator svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--color-text-subtle);
+        }
+        
+        /* Experience */
+        .timeline {
+            position: relative;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: linear-gradient(to bottom, var(--color-accent), var(--color-border));
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 3rem;
+            padding-bottom: 3rem;
+        }
+        
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -4px;
+            top: 0.5rem;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: var(--color-bg);
+            border: 2px solid var(--color-accent);
+            transition: var(--transition);
+        }
+        
+        .timeline-item:hover::before {
+            background: var(--color-accent);
+            box-shadow: 0 0 20px var(--color-accent);
+        }
+        
+        .timeline-header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 0.5rem 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .timeline-title {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--color-text);
+        }
+        
+        .timeline-company {
+            font-size: 1rem;
+            color: var(--color-accent);
+            font-weight: 500;
+        }
+        
+        .timeline-date {
+            font-size: 0.875rem;
+            color: var(--color-text-subtle);
+            font-weight: 500;
+        }
+        
+        .timeline-desc {
+            color: var(--color-text-muted);
+            max-width: 700px;
+        }
+        
+        .timeline-achievements {
+            margin-top: 1rem;
+            list-style: none;
+        }
+        
+        .timeline-achievements li {
+            position: relative;
+            padding-left: 1.25rem;
+            color: var(--color-text-muted);
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-achievements li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--color-accent);
+        }
+        
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .skill-category {
+            background: var(--color-bg-card);
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            padding: 2rem;
+            transition: var(--transition);
+        }
+        
+        .skill-category:hover {
+            border-color: var(--color-accent);
+            transform: translateY(-4px);
+        }
+        
+        .skill-category h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            color: var(--color-text);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .skill-category h3 svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--color-accent);
+        }
+        
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .skill-tag {
+            background: var(--color-accent-dim);
+            color: var(--color-accent);
+            padding: 0.375rem 0.875rem;
+            border-radius: 100px;
+            font-size: 0.8125rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .skill-tag:hover {
+            background: var(--color-accent);
+            color: var(--color-bg);
+        }
+        
+        /* Education */
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .education-card {
+            background: var(--color-bg-card);
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            padding: 2rem;
+            transition: var(--transition);
+        }
+        
+        .education-card:hover {
+            border-color: var(--color-accent);
+        }
+        
+        .education-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .education-card .degree {
+            color: var(--color-accent);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        
+        .education-card .years {
+            color: var(--color-text-subtle);
+            font-size: 0.875rem;
+        }
+        
+        /* Awards */
+        .awards-list {
+            display: grid;
+            gap: 1rem;
+        }
+        
+        .award-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.25rem 1.5rem;
+            background: var(--color-bg-card);
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+        
+        .award-item:hover {
+            border-color: var(--color-accent);
+            transform: translateX(8px);
+        }
+        
+        .award-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            background: var(--color-accent-dim);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .award-icon svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--color-accent);
+        }
+        
+        .award-content h4 {
+            font-family: var(--font-body);
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+        
+        .award-content p {
+            font-size: 0.875rem;
+            color: var(--color-text-muted);
+        }
+        
+        /* Interests */
+        .interests-content {
+            max-width: 700px;
+            color: var(--color-text-muted);
+            font-size: 1.125rem;
+            line-height: 1.8;
+        }
+        
+        .interests-content strong {
+            color: var(--color-text);
+            font-weight: 500;
+        }
+        
+        /* Contact */
+        .contact {
+            text-align: center;
+            background: var(--color-bg-elevated);
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+        }
+        
+        .contact h2 {
+            margin-bottom: 1rem;
+        }
+        
+        .contact-desc {
+            color: var(--color-text-muted);
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.875rem 1.75rem;
+            border: 1px solid var(--color-border);
+            border-radius: 100px;
+            color: var(--color-text);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .contact-btn:hover {
+            border-color: var(--color-accent);
+            background: var(--color-accent-dim);
+            color: var(--color-accent);
+        }
+        
+        .contact-btn svg {
+            width: 18px;
+            height: 18px;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 2rem;
+            text-align: center;
+            color: var(--color-text-subtle);
+            font-size: 0.875rem;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate {
+            animation: fadeInUp 0.8s ease forwards;
+            opacity: 0;
+        }
+        
+        .animate-delay-1 { animation-delay: 0.1s; }
+        .animate-delay-2 { animation-delay: 0.2s; }
+        .animate-delay-3 { animation-delay: 0.3s; }
+        .animate-delay-4 { animation-delay: 0.4s; }
+        
+        /* Responsive */
+        @media (max-width: 900px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero-image {
+                max-width: 250px;
+                margin: 0 auto;
+                order: -1;
+            }
+            
+            .hero-meta {
+                justify-content: center;
+            }
+            
+            .hero-tagline {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem 1.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                gap: 0;
+                background: var(--color-bg-elevated);
+                border-bottom: 1px solid var(--color-border);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                border-top: 1px solid var(--color-border);
+            }
+            
+            .nav-links a {
+                display: block;
+                padding: 1rem 1.5rem;
+            }
+            
+            .nav-toggle {
+                display: block;
+            }
+            
+            section {
+                padding: 4rem 1.5rem;
+            }
+            
+            .timeline::before {
+                left: 4px;
+            }
+            
+            .timeline-item {
+                padding-left: 2rem;
+            }
+            
+            .timeline-item::before {
+                left: 0;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="#" class="nav-logo">Josh Gilmour</a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-      </div>
     </nav>
-
-    <div class="container-fluid p-0">
-
-      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
-        <div class="my-auto">
-          <h1 class="mb-0">Josh
-            <span class="text-primary">Gilmour</span>
-          </h1>
-          <div class="subheading mb-5">Boston, MA ·
-            <a href="mailto:josh@joshgilmour.com">josh@joshgilmour.com</a>
-          </div>
-          <p class="lead mb-5">With over 20 years of experience in information technology, I am a pioneering and visionary leader who thrives on embracing challenges and driving business advancements. My comprehensive involvement in all aspects of IT has enabled me to leverage technology for remarkable outcomes such as revenue growth, operational efficiencies, and exceptional customer experiences. Fueled by unwavering passion, a strong work ethic, and an innate sense of integrity, I am deeply committed to exploring emerging technologies and their potential impact on shaping a brighter future.</p>
-          <div class="social-icons">
-            <a href="https://www.linkedin.com/in/joshgilmour">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://github.com/jgilmour">
-              <i class="fab fa-github"></i>
-            </a>
-          </div>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+        <div class="hero-content">
+            <div>
+                <p class="section-label animate">IT Leadership</p>
+                <h1 class="animate animate-delay-1">Josh<br><span>Gilmour</span></h1>
+                <p class="hero-tagline animate animate-delay-2">
+                    Senior Director of IT with 20+ years of experience transforming organizations through strategic technology leadership, team development, and operational excellence.
+                </p>
+                <div class="hero-meta animate animate-delay-3">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                        </svg>
+                        Boston, MA
+                    </span>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0" />
+                        </svg>
+                        Senior Director of IT
+                    </span>
+                </div>
+            </div>
+            <div class="hero-image animate animate-delay-4">
+                <img src="img/joshg.jpg" alt="Josh Gilmour" />
+            </div>
         </div>
-      </section>
-
-      <hr class="m-0">
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
-        <div class="my-auto">
-          <h2 class="mb-5">Experience</h2>
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Senior Director of IT</h3>
-              <div class="subheading mb-3"><b>Salsify</b></div>
-              <p></p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">June 2022 - Present</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Senior Director of IT Operations</h3>
-              <div class="subheading mb-3"><b>Brightcove</b></div>
-              <p>Responsible for managing the IT team and supporting employees and contractors across 9 global offices, reporting directly to the Chief Legal Officer. Primary responsibilities include mentorship of the team, escalations for issues that arise, vendor relationships, along with direct communication with stakeholders on solving business needs.</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">January 2019 - June 2022</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Director of IT Operations</h3>
-              <div class="subheading mb-3"><b>Brightcove</b></div>
-              <p>Reported directly to the Chief Financial Officer after the VP of Information Technology resigned. Quickly learned how to keep the team moving forward with the added responsibility of managing additional staff, and ensure our goals matched the business needs.</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">September 2016 - January 2019</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Principal Systems and Network Administrator</h3>
-              <div class="subheading mb-3"><b>Brightcove</b></div>
-              <p>Promoted 4 times to Principal over ~6yrs, reporting directly to the VP of Information Technology due to additional responsibilities. Worked on systems and network infrastructure, relocation of office headquarters, and served as an on-call/escalation point for the team, in addition to efficiently solving tickets.</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">July 2015 - September 2016</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Senior Systems and Network Administrator</h3>
-              <div class="subheading mb-3"><b>Brightcove</b></div>
-              <p>Building, installing, maintaining and troubleshooting Windows & Linux Environments. Providing internal IT support for employees running Windows and Mac OSX operating systems.</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">September 2013 - July 2015</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Network Administrator</h3>
-              <div class="subheading mb-3"><b>Brightcove</b></div>
-              <p></p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">February 2011 - September 2013</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Windows Systems & Network Administrator</h3>
-              <div class="subheading mb-3"><b>Brightcove</b></div>
-              <p>Building, installing, maintaining and troubleshooting the windows environments along with some work on various CentOS/RHEL servers.</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">July 2009 - February 2011</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-		<!-- asset inventory lookup with service tag -->
-
-              <h3 class="mb-0">Technical Support Engineer</h3>
-              <div class="subheading mb-3"><b>Brightcove</b></div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla augue ex, at mattis nunc tincidunt at. Nullam quis metus scelerisque, semper orci eu, aliquam massa. Maecenas finibus aliquet ex sit amet euismod. Quisque ornare molestie lectus, quis iaculis massa venenatis vel. Aliquam sit amet malesuada diam. Vivamus et sagittis nisl. Fusce libero odio, facilisis nec nibh id, semper pellentesque eros. Etiam pretium eu ex a suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta tristique magna sit amet maximus. Donec cursus libero quis purus congue pulvinar.</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">July 2008 - July 2009</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Information Technology Intern</h3>
-              <div class="subheading mb-3"><b>Brightcove</b></div>
-              <p>During my internship I worked with the IT manager to support a fast growing company. During the two year internship, I was the primary contact for all things desktop. Daily routines consisted of break/fix of Dell laptops and desktops along with cloning of machines for new hires. In addition to daily desktop support tasks, I incorporated solutions such as inventoring cd keys for software purchases built from scratch using PHP/MySQL and Apache.
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">June 2006 - July 2008</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Information Security Co-op</h3>
-              <div class="subheading mb-3"><b>Stanford Financial Group</b></div>
-              <p>I had the opportunity to take on a co-op position reporting directly to the Director of Network and Security Operations at Stanford Financial Group. After an introductory period based out of Houston, TX I worked remotely out of the Boston, MA satallite office. During this period of time I assisted with any programming/security projects that were needed.
-                <div class="subheading mb-1">Key Accomplishments</div>
-                <ul class="fa-ul mb-0">
-                  <li><i class="fa-li fa fa-plus"></i>Setup of Network / Security hardware in Boston satallite office</li>
-                  <li><i class="fa-li fa fa-plus"></i>Hands-on support for security software installation in Boston satallite</li>
-                  <li><i class="fa-li fa fa-plus"></i>Researched and presented reccomendations on an internet messenger security suite after comparing multiple vendors</li>
-                </ul></p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">June 2005 - September 2005</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Network/Security Intern</h3>
-              <div class="subheading mb-3"><b>Conqwest</b></div>
-              <p>I started at Conqwest at the age of 15 while in High School and continued into my first year of college. Having a passion for Internet Security, I was fortunante to find a Internet Security VAR so close to home that was willing to give me a chance. Throughout my time at Conqwest I took on multiple roles ranging from networking and security to web design and programming. This mix of responsibilities gave me my first experience with a 'Jack of all trades' type of role, which I thoroughly enjoyed.
-              <div class="subheading mb-1">Key Accomplishments</div>
-              <ul class="fa-ul mb-0">
-                <li><i class="fa-li fa fa-plus"></i>Netscreen (now Juniper) firewall certification</li>
-                <li><i class="fa-li fa fa-plus"></i>Designed/coded automated custom network vulnerability scans when clients filled out a form</li>
-                <li><i class="fa-li fa fa-plus"></i>Assisted with domain migration from NT4 to Windows 2000</li>
-                <li><i class="fa-li fa fa-plus"></i>Worked hands-on with installation/maintenance of various CA (Computer Associates) and TrendMicro security product offerings across multiple customer sites</li>
-                <li><i class="fa-li fa fa-plus"></i>Performed maintenance/upkeep of corporate website</li>
-                <li><i class="fa-li fa fa-plus"></i>Designed new corporate website for small financial institution based out of Milford, MA</li>
-              </ul></p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">March 2000 - August 2004</span>
-            </div>
-          </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>
         </div>
-
-      </section>
-
-      <hr class="m-0">
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
-        <div class="my-auto">
-          <h2 class="mb-5">Education</h2>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Bellevue University</h3>
-              <div class="subheading mb-3">BCIS, Computer Networking</div>
+    </section>
+    
+    <!-- Experience Section -->
+    <section id="experience">
+        <p class="section-label">Career Journey</p>
+        <h2>Experience</h2>
+        
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span class="timeline-title">Senior Director of IT</span>
+                    <span class="timeline-company">Salsify</span>
+                    <span class="timeline-date">June 2022 — Present</span>
+                </div>
+                <p class="timeline-desc">
+                    Leading IT strategy and operations for a high-growth commerce experience management platform, driving digital transformation initiatives and building scalable infrastructure to support rapid business expansion.
+                </p>
             </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">August 2008 - May 2010</span>
+            
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span class="timeline-title">Senior Director of IT Operations</span>
+                    <span class="timeline-company">Brightcove</span>
+                    <span class="timeline-date">January 2019 — June 2022</span>
+                </div>
+                <p class="timeline-desc">
+                    Managed IT team supporting employees and contractors across 9 global offices, reporting to the Chief Legal Officer. Led team mentorship, escalation management, vendor relationships, and stakeholder communication to solve business needs.
+                </p>
             </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Wentworth Institute of Technology</h3>
-              <div class="subheading mb-3">Computer Networking and Information Systems</div>
+            
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span class="timeline-title">Director of IT Operations</span>
+                    <span class="timeline-company">Brightcove</span>
+                    <span class="timeline-date">September 2016 — January 2019</span>
+                </div>
+                <p class="timeline-desc">
+                    Reported directly to CFO after VP of IT departure. Successfully navigated increased responsibility, managing additional staff while ensuring IT goals aligned with business objectives.
+                </p>
             </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">August 2003 - May 2006</span>
+            
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span class="timeline-title">Principal Systems & Network Administrator</span>
+                    <span class="timeline-company">Brightcove</span>
+                    <span class="timeline-date">July 2015 — September 2016</span>
+                </div>
+                <p class="timeline-desc">
+                    Promoted 4 times to Principal level over ~6 years. Managed systems and network infrastructure, led office headquarters relocation, and served as on-call escalation point for the team.
+                </p>
             </div>
-          </div>
-
-        </div>
-      </section>
-
-      <hr class="m-0">
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
-        <div class="my-auto">
-          <h2 class="mb-5">Professional Skills</h2>
-
-          <!--
-          Specialties:
-          Information Technology Strategy, Engineering, and Operations; Service Desk, Help Desk, Genius Bar, Executive IT & Site IT Support; Messaging & Collaboration; SSO; Cloud Solutions; Networks (LAN/WAN/Wifi/Firewall); VOIP; Audio Visual; Data Center and Security Services; IT Portfolio, Program and Project Management; Financial Forecasting, Budgeting, and Planning; IT Asset Management; Vendor Management and Negotiations; Training; Process Improvement; ITIL Framework; IT Service Management and Outsourcing Services.
-
-          Technologies:
-          • Platforms: Windows Client/Server and MacOS; Unix; Linux; VMware vSphere
-          • PC/Mac/Mobile Endpoint Management (Altiris, MDT, Deploy Studio, Centrify, MobileIron)
-          • Single Sign On – Okta
-          • Office Productivity - Office 365, Box, Visio, Lucidchart and Google Apps
-          • Business Communications – RingCentral Teams, Meetings, Phone, Webinar, Rooms, Cisco Jabber, WebEx, Zoom, and Confluence
-          • Case, Project and Portfolio Management – Jira, Salesforce, and SmartSheet
-          • Networks – Ruckus, Juniper, Aruba
-          • Mobility – iPad, iPhone, Android
-          • Security – Symantec Endpoint Protection, Encryption, Proofpoint, Fortinet, Palo Alto Network
-          • Audio Visual Technologies
-          • Cloud Server Infrastructure – Azure, Rackspace, AWS
-          -->
-		
-          <div class="subheading mb-3">Specialties</div>
-          <ul class="fa-ul mb-0">
-            <li><i class="fa-li fa fa-check"></i>Budgeting & Planning</li>
-            <li><i class="fa-li fa fa-check"></i>Executive IT & Site IT Support</li>
-            <li><i class="fa-li fa fa-check"></i>IT Project Management</li>
-            <li><i class="fa-li fa fa-check"></i>Information Technology Strategy</li>
-            <li><i class="fa-li fa fa-check"></i>Leadership and Delegation</li>
-            <li><i class="fa-li fa fa-check"></i>Mentoring IT Staff</li>
-            <li><i class="fa-li fa fa-check"></i>Messaging & Collaboration</li>
-            <li><i class="fa-li fa fa-check"></i>Networks (LAN/WAN/Wifi/Firewall)</li>
-            <li><i class="fa-li fa fa-check"></i>Process Improvement</li>
-            <li><i class="fa-li fa fa-check"></i>SSO</li>
-            <li><i class="fa-li fa fa-check"></i>Service Desk</li>
-            <li><i class="fa-li fa fa-check"></i>Training</li>
-	    <li><i class="fa-li fa fa-check"></i>Vendor Management and Negotiations</li>
-	  </ul></br>
-		
-          <div class="subheading mb-3">Technologies</div>
-          <ul class="fa-ul mb-0">
-            <li>
-              <i class="fa-li fa fa-check"></i>
-		    <i><b>Automation:</b></i></br> Atlassian Automation, GAM, OKTA Workflows, Slack Workflows, Workato, Zapier</li>
-            <li>
-              <i class="fa-li fa fa-check"></i>
-		    <i><b>Network/Server:</b></i></br> AWS EC2, AWS S3, AWS VPC, AWS IAM, Active Directory, Cisco, Meraki, Nutanix, Ubuntu/CentOS Linux, Windows Server</li>
-            <li>
-              <i class="fa-li fa fa-check"></i>
-		    <i><b>SaaS Administration:</b></i></br> Atlassian, Cato, Coupa, DocuSign, Expensify, Github, Gong, Google Workspace, JAMF, JumpCloud, Lucid, Miro, OKTA, Outreach, Slack, Zoom, Zylo </li>
-          </ul>
-        </div>
-      </section>
-
-      <hr class="m-0">
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
-        <div class="my-auto">
-          <h2 class="mb-5">Interests</h2>
-          <p>I'm a huge music fan and an avid concert-goer, any time there is a show nearby for a band I enjoy I do my best to check them out. Aside from music I like to spend my downtime fishing when weather permits and enjoy taking my sons along with me. I have a passion for continuing to learn the latest and greatest trends in technology, and lately have been diving deep on automation and how it can save time and get repeatable results which works nicely alongside process. You may also find me hitting the trails offroading in my wrangler <i class="fa-solid fa-truck-monster"></i></p>
-        </div>
-      </section>
-
-      <hr class="m-0">
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
-        <div class="my-auto">
-          <h2 class="mb-5">Awards &amp; Certifications</h2>
-          <ul class="fa-ul mb-0">
-            <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
-              <a href="https://credentials.workato.com/0b6db587-43bd-48ee-b637-88759b46e116">Workato | Automation Pro I</a>
-            </li>
-            <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
-              <a href="img/cmno.png">Certified Meraki Network Operator</a>
-            </li>
-            <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
-              Nutanix Acropolis Virtualization Administration (AHV)
-            </li>
-              <li>
-                <i class="fa-li fa fa-trophy text-warning"></i>
-                Submitted Security Vulnerabilities/Exploits:
-                <ul>
-                <li>
-                  <b><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-2063">CVE-2004-2063</b> - <i>AntiBoard 0.6/0.7</i> - XSS Vulnerability</a></li>
-                <li>
-                  <b><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-2062">CVE-2004-2062</b> - <i>AntiBoard 0.6/0.7</i> - SQL Injection Vulnerability</a></li>
-                <li>
-                  <b><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0617">CVE-2004-0617</b> - <i>ArbitroWeb 0.5/0.6</i> - XSS Vulnerability</a></li>
+            
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span class="timeline-title">Senior Systems & Network Administrator</span>
+                    <span class="timeline-company">Brightcove</span>
+                    <span class="timeline-date">September 2013 — July 2015</span>
+                </div>
+                <p class="timeline-desc">
+                    Built, installed, and maintained Windows & Linux environments. Provided internal IT support for employees across Windows and Mac platforms.
+                </p>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span class="timeline-title">Network Administrator → Systems Administrator</span>
+                    <span class="timeline-company">Brightcove</span>
+                    <span class="timeline-date">July 2009 — September 2013</span>
+                </div>
+                <p class="timeline-desc">
+                    Progressive advancement through network and systems administration roles, managing Windows environments and CentOS/RHEL servers.
+                </p>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span class="timeline-title">Technical Support Engineer</span>
+                    <span class="timeline-company">Brightcove</span>
+                    <span class="timeline-date">July 2008 — July 2009</span>
+                </div>
+                <p class="timeline-desc">
+                    Provided technical support for Brightcove's video platform customers, troubleshooting issues and ensuring client success with the product.
+                </p>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span class="timeline-title">IT Intern</span>
+                    <span class="timeline-company">Brightcove</span>
+                    <span class="timeline-date">June 2006 — July 2008</span>
+                </div>
+                <p class="timeline-desc">
+                    Primary contact for desktop support at a fast-growing company. Handled break/fix for Dell systems, machine cloning for new hires, and built a custom PHP/MySQL inventory system for software license tracking.
+                </p>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span class="timeline-title">Information Security Co-op</span>
+                    <span class="timeline-company">Stanford Financial Group</span>
+                    <span class="timeline-date">June 2005 — September 2005</span>
+                </div>
+                <p class="timeline-desc">
+                    Reported to Director of Network and Security Operations. Set up network/security hardware in Boston satellite office, supported security software installation, and researched internet messenger security solutions.
+                </p>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span class="timeline-title">Network/Security Intern</span>
+                    <span class="timeline-company">Conqwest</span>
+                    <span class="timeline-date">March 2000 — August 2004</span>
+                </div>
+                <p class="timeline-desc">
+                    Started at age 15 at an Internet Security VAR. First experience in a 'Jack of all trades' role spanning networking, security, web design, and programming.
+                </p>
+                <ul class="timeline-achievements">
+                    <li>Netscreen (Juniper) firewall certification</li>
+                    <li>Built automated custom network vulnerability scans</li>
+                    <li>Assisted NT4 to Windows 2000 domain migration</li>
+                    <li>Hands-on CA and TrendMicro product deployments</li>
                 </ul>
-              </li>
-          </ul>
+            </div>
         </div>
-      </section>
-
-    </div>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/resume.min.js"></script>
-
-  </body>
-
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills">
+        <p class="section-label">Expertise</p>
+        <h2>Skills & Technologies</h2>
+        
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+                    </svg>
+                    Leadership & Strategy
+                </h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">IT Strategy</span>
+                    <span class="skill-tag">Team Leadership</span>
+                    <span class="skill-tag">Budgeting & Planning</span>
+                    <span class="skill-tag">Vendor Management</span>
+                    <span class="skill-tag">Mentoring</span>
+                    <span class="skill-tag">Process Improvement</span>
+                    <span class="skill-tag">Project Management</span>
+                    <span class="skill-tag">Executive Support</span>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008zm-3 6h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008z" />
+                    </svg>
+                    Infrastructure
+                </h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">AWS (EC2, S3, VPC, IAM)</span>
+                    <span class="skill-tag">Active Directory</span>
+                    <span class="skill-tag">Cisco</span>
+                    <span class="skill-tag">Meraki</span>
+                    <span class="skill-tag">Nutanix</span>
+                    <span class="skill-tag">Ubuntu/CentOS</span>
+                    <span class="skill-tag">Windows Server</span>
+                    <span class="skill-tag">LAN/WAN/WiFi</span>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z" />
+                    </svg>
+                    SaaS & Cloud
+                </h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Atlassian</span>
+                    <span class="skill-tag">Google Workspace</span>
+                    <span class="skill-tag">Okta</span>
+                    <span class="skill-tag">JumpCloud</span>
+                    <span class="skill-tag">JAMF</span>
+                    <span class="skill-tag">Slack</span>
+                    <span class="skill-tag">Zoom</span>
+                    <span class="skill-tag">GitHub</span>
+                    <span class="skill-tag">DocuSign</span>
+                    <span class="skill-tag">Cato</span>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    Automation
+                </h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Workato</span>
+                    <span class="skill-tag">Zapier</span>
+                    <span class="skill-tag">Okta Workflows</span>
+                    <span class="skill-tag">Slack Workflows</span>
+                    <span class="skill-tag">Atlassian Automation</span>
+                    <span class="skill-tag">GAM</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Education Section -->
+    <section id="education">
+        <p class="section-label">Background</p>
+        <h2>Education</h2>
+        
+        <div class="education-grid">
+            <div class="education-card">
+                <h3>Bellevue University</h3>
+                <p class="degree">BCIS, Computer Networking</p>
+                <p class="years">2008 — 2010</p>
+            </div>
+            
+            <div class="education-card">
+                <h3>Wentworth Institute of Technology</h3>
+                <p class="degree">Computer Networking & Information Systems</p>
+                <p class="years">2003 — 2006</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Awards Section -->
+    <section id="awards">
+        <p class="section-label">Recognition</p>
+        <h2>Certifications & Awards</h2>
+        
+        <div class="awards-list">
+            <a href="https://credentials.workato.com/0b6db587-43bd-48ee-b637-88759b46e116" target="_blank" rel="noopener" class="award-item">
+                <div class="award-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+                    </svg>
+                </div>
+                <div class="award-content">
+                    <h4>Workato Automation Pro I</h4>
+                    <p>Certified automation professional</p>
+                </div>
+            </a>
+            
+            <div class="award-item">
+                <div class="award-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+                    </svg>
+                </div>
+                <div class="award-content">
+                    <h4>Certified Meraki Network Operator</h4>
+                    <p>Network administration certification</p>
+                </div>
+            </div>
+            
+            <div class="award-item">
+                <div class="award-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+                    </svg>
+                </div>
+                <div class="award-content">
+                    <h4>Nutanix AHV Administration</h4>
+                    <p>Acropolis virtualization certification</p>
+                </div>
+            </div>
+            
+            <div class="award-item">
+                <div class="award-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m0-10.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.75c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.249-8.25-3.286zm0 13.036h.008v.008H12v-.008z" />
+                    </svg>
+                </div>
+                <div class="award-content">
+                    <h4>Published Security Vulnerabilities</h4>
+                    <p>CVE-2004-2063, CVE-2004-2062, CVE-2004-0617 — XSS & SQL Injection discoveries</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Interests Section -->
+    <section id="interests">
+        <p class="section-label">Beyond Work</p>
+        <h2>Interests</h2>
+        
+        <div class="interests-content">
+            <p>
+                I'm a <strong>music enthusiast</strong> and avid concert-goer—any time a favorite band is nearby, I make it a priority to catch the show. When the weather permits, you'll find me <strong>fishing</strong>, often with my sons in tow. I have a passion for staying current with <strong>emerging technologies</strong>, particularly diving deep into automation and building repeatable processes. You might also spot me <strong>hitting the trails</strong> in my Wrangler when adventure calls.
+            </p>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <p class="section-label" style="justify-content: center;">Get in Touch</p>
+        <h2>Let's Connect</h2>
+        <p class="contact-desc">
+            Interested in discussing IT leadership, technology strategy, or potential opportunities? I'd love to hear from you.
+        </p>
+        <div class="contact-links">
+            <a href="mailto:josh@joshgilmour.com" class="contact-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                </svg>
+                Email Me
+            </a>
+            <a href="https://linkedin.com/in/joshgilmour" target="_blank" rel="noopener" class="contact-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+                LinkedIn
+            </a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Josh Gilmour. Built with care.</p>
+    </footer>
+    
+    <script>
+        // Mobile navigation toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close mobile nav when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.timeline-item, .skill-category, .education-card, .award-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
 </html>
